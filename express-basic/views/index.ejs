@@ -8,10 +8,13 @@
 </head>
 <body>
     <p>
-        Nama saya ega!
+        Nama saya <%= nama %>
     </p>
     <p>
-        umur saya 24
+        umur saya <%= umur %>
     </p>
+    <% for(let i=0; i < buah.length; i++){ %>
+        <p><%= buah[i].name %></p>
+    <% } %>
 </body>
 </html>

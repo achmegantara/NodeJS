@@ -7,7 +7,17 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index')
+    const buah = [
+        {name: 'apel'},
+        {name: 'melon'},
+        {name: 'melon'}
+    ]
+
+    res.render('index', {
+        nama : 'achmad megantara',
+        umur : 24,
+        buah : buah
+    })
 })
 app.get('/:name', (req,res) => res.send(`Nama saya : ${req.params.name}`))
 
